@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
             });
         }
         else {
-            console.log(data)
+
             res.status(200).json({
                 status: "done",
                 data: data
