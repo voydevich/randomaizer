@@ -1,0 +1,127 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto";
+  font-size: 20px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.btn {
+  width: 200px;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px dodgerblue solid;
+  font-size: 12px;
+  font-weight: bold;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: dodgerblue;
+  cursor: pointer;
+  transition: background .5s, color .5s;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding: 5px 10px;
+  &:hover {
+    background: dodgerblue;
+    color: white;
+  }
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  &.cancel {
+    color: red;
+    border-color: red;
+    &:hover {
+      background: red;
+      color: white;
+    }
+  }
+}
+
+.new-data {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.controls {
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.data {
+  margin: 20px auto;
+  padding: 30px 30px;
+  font-size: 15px;
+  line-height: 24px;
+  white-space: pre-wrap;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  display: table;
+}
+
+.no-data {
+  margin: 20px auto;
+  padding: 30px 30px;
+  font-size: 24px;
+  line-height: 32px;
+  border-radius: 5px;
+  display: table;
+  border: 1px red solid;
+}
+
+.popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  &_mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  &_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background: white;
+  }
+  &_area {
+    width: 450px;
+    height: 300px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px dodgerblue solid;
+    padding: 10px;
+  }
+  &_flex {
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      margin: 0;
+    }
+  }
+}
+
